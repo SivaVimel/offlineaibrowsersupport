@@ -1,0 +1,1 @@
+# offlineaibrowsersupport
