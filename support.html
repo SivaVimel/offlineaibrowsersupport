@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support — Offline AI Browser</title>
+<meta name="description" content="Help and answers for Offline AI Browser: search engines, the AI overview, the page assistant, connecting a cloud model, and troubleshooting.">
+<style>
+  :root{
+    --bg:#0B0D11; --surface:#14181F; --elev:#1C222B; --stroke:#242B35;
+    --text:#F3F5F8; --text2:#9BA6B4; --text3:#6B7684;
+    --accent:#22D3EE; --accent2:#7C6CF6;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#FFFFFF; --surface:#F7F8FB; --elev:#FFFFFF; --stroke:#E6E9EF;
+      --text:#10141B; --text2:#56606E; --text3:#8A94A2;
+      --accent:#0E9CB8; --accent2:#5B4BE0;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:56px 22px 96px}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.2px}
+  .mark span{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.8px;margin:26px 0 10px;font-weight:800}
+  .lede{color:var(--text2);font-size:17px;margin:0 0 34px}
+  h2{font-size:20px;margin:42px 0 14px;font-weight:700;letter-spacing:-.2px}
+  p{margin:0 0 14px;color:var(--text2)}
+  p strong{color:var(--text)}
+  ul{margin:0 0 16px;padding-left:20px;color:var(--text2)} li{margin:0 0 8px}
+  details{background:var(--surface);border:1px solid var(--stroke);border-radius:14px;
+    padding:14px 18px;margin:0 0 10px}
+  details[open]{border-color:color-mix(in srgb,var(--accent) 34%,var(--stroke))}
+  summary{cursor:pointer;font-weight:650;color:var(--text);list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--text3);font-weight:700}
+  details[open] summary::after{content:"–"}
+  details p{margin:12px 0 2px}
+  .contact{background:var(--surface);border:1px solid var(--stroke);border-radius:16px;
+    padding:20px 22px;margin:34px 0 0}
+  a{color:var(--accent);text-decoration:none;
+    border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+  a:hover{border-bottom-color:var(--accent)}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--stroke);
+    color:var(--text3);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">Offline <span>AI</span> Browser</div>
+
+  <h1>Support</h1>
+  <p class="lede">A browser that reads the web for you, with the AI running on your phone. Here is how each part works, and what to try when something does not.</p>
+
+  <h2>Getting started</h2>
+  <p>There is no sign-up and nothing to download — the language model ships inside the app, so it works the first time you open it, even on a plane. Type a query or a web address in the bar and go.</p>
+
+  <h2>Search</h2>
+
+  <details>
+    <summary>What does "All" mean next to the search bar?</summary>
+    <p>All is the default. It asks DuckDuckGo, Bing, Brave and Startpage in turn and merges what they return, removing duplicates. Each result is labelled with the engine that found it. You can pick a single engine instead, or add your own.</p>
+  </details>
+
+  <details>
+    <summary>Can I use a different search engine?</summary>
+    <p>Yes. Settings → Search engine → Custom. Open your engine in any browser, search for the word <em>test</em>, copy the address of the results page, and paste it in — replacing <em>test</em> with <code>%s</code>. There is a Test button that runs a real search and tells you how many results it could read before you commit to it.</p>
+  </details>
+
+  <details>
+    <summary>The tabs — Images, Videos, News, Forums, Books, Flights, Finance</summary>
+    <p>Images come from a dedicated image search and Videos from YouTube results; the rest narrow your chosen engine to the right kind of site. If a narrow search finds nothing, the app automatically widens it rather than showing you an empty page.</p>
+  </details>
+
+  <details>
+    <summary>Why did one engine return nothing?</summary>
+    <p>Search engines sometimes challenge or rate-limit requests. The app moves on to the others and shows whatever it has, which is why a result count can vary between identical searches. Startpage in particular runs a verification step that takes a few seconds.</p>
+  </details>
+
+  <h2>AI Overview</h2>
+
+  <details>
+    <summary>What is the panel above the results?</summary>
+    <p>A summary of everything a search brought back, written on your phone. Results appear immediately — the summary fills in underneath and never delays them. Where several engines contribute, each gets its own short summary, with the pages it drew on listed as chips you can tap.</p>
+  </details>
+
+  <details>
+    <summary>It is taking a while</summary>
+    <p>Generating text on a phone takes seconds, not milliseconds, and older devices are slower. The rotating word tells you it is still working. Tap <strong>Stop</strong> at any time — the results themselves are already there and stay there. You can also switch the overview off entirely in Settings.</p>
+  </details>
+
+  <h2>The page assistant</h2>
+
+  <details>
+    <summary>The glowing button on a web page</summary>
+    <p>Tap it and the app reads the page before you ask anything: the text the site provides, and — if "Read the screen too" is on — a picture of what is currently on screen, analysed on your device for text, imagery and whether people are pictured. Then ask it anything about the page.</p>
+  </details>
+
+  <details>
+    <summary>Does the screenshot go anywhere?</summary>
+    <p>No. It is analysed on your device using Apple's Vision framework and discarded. It is never stored and never uploaded. You can turn the feature off in Settings → On-device AI.</p>
+  </details>
+
+  <h2>Using a cloud model instead</h2>
+
+  <details>
+    <summary>Connecting Gemini, ChatGPT, Claude and others</summary>
+    <p>Tap the pill at the bottom of the home screen, or Settings → the engine row. Choose Cloud, pick a provider, paste your API key and select a model. Your key is stored only on your device and is sent only to that provider.</p>
+    <p>While a cloud engine is selected, your questions and the relevant page text are sent to it — the app says so plainly on the home screen and in Settings. Switch back to on-device at any time.</p>
+  </details>
+
+  <details>
+    <summary>Connecting my own server</summary>
+    <p>Choose Custom and give it an address, an optional auth header, a request body containing <code>{prompt}</code>, and the path to the text inside each streamed chunk. The defaults describe an OpenAI-compatible server, which is what llama.cpp's own server speaks — so a model on your own machine usually needs little more than the URL.</p>
+  </details>
+
+  <details>
+    <summary>Can I use a different local model?</summary>
+    <p>Yes. In the engine picker, On device → Import a .gguf model. Anything llama.cpp can load will work, though larger models are slower and may not fit on older phones.</p>
+  </details>
+
+  <h2>Troubleshooting</h2>
+
+  <details>
+    <summary>An answer stopped halfway</summary>
+    <p>Replies have a length limit that is smaller on devices with less memory. Ask a narrower question, or connect a cloud model for long-form answers.</p>
+  </details>
+
+  <details>
+    <summary>The app relaunched itself after I changed model</summary>
+    <p>Expected on devices with less memory. Two models cannot be held at once there, so the app restarts to swap cleanly rather than risk being terminated by the system.</p>
+  </details>
+
+  <details>
+    <summary>A page will not load</summary>
+    <p>Try the reload button in the top bar. The back arrow returns to the previous page, and closes the page when there is nothing to go back to. The lock beside the address shows whether the connection is secure.</p>
+  </details>
+
+  <details>
+    <summary>Clearing my history</summary>
+    <p>Settings → Privacy → Clear recents removes recent searches and recently opened pages. Everything the app stores lives on your device and is removed entirely if you delete the app.</p>
+  </details>
+
+  <div class="contact">
+    <p style="margin:0 0 6px;color:var(--text);font-weight:650">Still stuck?</p>
+    <p style="margin:0">Email <a href="mailto:support@offlineaibrowser.com">support@offlineaibrowser.com</a> with your device model, iOS version, and what you were doing. There are no accounts, so there is nothing to look up — the more detail, the faster the answer.</p>
+  </div>
+
+  <footer>
+    Built with Llama. Llama 3.2 is licensed under the Llama 3.2 Community License,
+    Copyright © Meta Platforms, Inc. All Rights Reserved.
+    · <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
